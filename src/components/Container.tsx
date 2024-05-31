@@ -9,9 +9,13 @@ const Container = () => {
     setValue(e.target.value);
   };
   const btnHandler = () => {
-    setList([...list, value]);
-    console.log(value);
-    setValue("");
+    if (value !== "") {
+      setList([...list, value]);
+      console.log(value);
+      setValue("");
+    } else {
+      alert("Please Add Your To-Do List");
+    }
   };
 
   return (
