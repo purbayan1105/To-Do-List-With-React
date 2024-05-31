@@ -18,6 +18,18 @@ const Container = () => {
     }
   };
 
+  const Handler2 = (e: any) => {
+    if (e.key === "Enter") {
+      if (value !== "") {
+        setList([...list, value]);
+        console.log(value);
+        setValue("");
+      } else {
+        alert("Please Add Your To-Do List");
+      }
+    }
+  };
+
   return (
     <>
       <div className="flex justify-center text-2xl font-normal mt-5 mb-5">
@@ -30,6 +42,7 @@ const Container = () => {
             color="success"
             value={value}
             onChange={onChangeHandler}
+            onKeyDown={Handler2}
           />
         </div>
         <Button
