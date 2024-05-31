@@ -16,7 +16,7 @@ const Container = () => {
 
   return (
     <>
-      <div className="flex justify-center text-2xl font-normal mt-5">
+      <div className="flex justify-center text-2xl font-normal mt-5 mb-5">
         Create Your To-Do List Here
       </div>
       <div className="">
